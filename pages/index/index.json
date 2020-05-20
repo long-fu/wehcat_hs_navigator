@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "hs_navigator": "/components/hs_navigator/hs_navigator"
+  },
+  "navigationStyle": "custom"
+}

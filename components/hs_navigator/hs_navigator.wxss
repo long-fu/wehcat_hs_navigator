@@ -1,0 +1,39 @@
+/* components/hs_navigator/hs_navigator.wxss */
+.hs_navigator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  background-color: burlywood;
+  z-index: 999;
+}
+
+.left_bar_view {
+  background-color: chartreuse;
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title_bar_view {
+  background-color: rgb(114, 67, 201);
+  position: absolute;
+  bottom: 0px;
+  
+  transform: translateX(-50%);
+  left: 50%;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_bar_view {
+  position: absolute;
+  bottom: 0px;
+}

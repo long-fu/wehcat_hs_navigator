@@ -1,0 +1,30 @@
+<!--components/hs_navigator/hs_navigator.wxml-->
+<!-- <text>components/hs_navigator/hs_navigator.wxml</text> -->
+
+<view class="hs_navigator" style="height: {{navigatorBarHeight + statusHeight}}px; background-color:{{background_color}}">
+	<view class="left_bar_view" style="height: {{navigatorBarHeight}}px">
+
+		<block wx:for="{{leftBarList}}">
+			<block wx:if="{{item.type == 'view'}}">
+				<view style="{{item.style}}" bindtap="leftBarTap" data-index="{{index}}">{{item.title}}</view>
+			</block>
+			<block wx:elif="{{item.type == 'image'}}">
+				<image mode="aspectFit" style="{{item.style}}" src="{{item.src}}" bindtap="leftBarTap" data-index="{{index}}"></image>
+			</block>
+		</block>
+
+	</view>
+
+	<view class="title_bar_view" style="height: {{navigatorBarHeight}}px">
+		<block wx:for="{{titleBarList}}">
+			<block wx:if="{{item.type == 'view'}}">
+				<view style="{{item.style}}" bindtap="titleBarTap" data-index="{{index}}">{{item.title}}</view>
+			</block>
+			<block wx:elif="{{item.type == 'image'}}">
+				<image mode="aspectFit" style="{{item.style}}" src="{{item.src}}" bindtap="titleBarTap" data-index="{{index}}"></image>
+			</block>
+		</block>
+	</view>
+
+	<view class="right_bar_view" style="height: {{navigatorBarHeight}}px"></view>
+</view>
